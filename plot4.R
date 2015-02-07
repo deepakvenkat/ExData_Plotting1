@@ -12,6 +12,7 @@ plot4 <- function () {
   subdata$DateNTime <- as.POSIXlt(paste(as.Date(subdata$Date, format="%d/%m/%Y"), subdata$Time, sep=" "))
   #Slightly bigger png file in order to fit all the four graphs. 
   png(filename = "plot4.png", width = 960, height = 960)
+  #Create a canvas with 2 rows and 2 colms. 
   par(mfrow = c(2, 2))
   #Top Left : Global active power
   plot(subdata$DateNTime, subdata$Global_active_power, type="l", xlab="", ylab="Global Active Power")
@@ -26,3 +27,7 @@ plot4 <- function () {
   plot(subdata$DateNTime, subdata$Global_reactive_power, type="l", xlab="", ylab="Global_Reactive_Power")
   dev.off()
 } 
+
+#Calling the function so that 
+# sourcing the file produces the plot. 
+plot4()
