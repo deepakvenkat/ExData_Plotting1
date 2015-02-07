@@ -14,7 +14,7 @@ plot1 <- function () {
  #Open a png file to create the plot. 
  png(filename = "plot1.png", width = 480, height = 480)
  hist(subdata$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", 
-      ylab = "Frequency", main = "Globacl Active Power")
+      ylab = "Frequency", main = "Global Active Power")
  dev.off()
 }
 
